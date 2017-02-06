@@ -70,6 +70,8 @@ alias cdr='cd Workspace/Ruby'
 alias cdp='cd Workspace/Python'
 alias cdpr='cd Workspace/Practice'
 
+alias p='python3'
+
 #
 
 # Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
