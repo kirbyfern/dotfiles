@@ -70,11 +70,13 @@ alias sdu='sudo apt-get update'
 alias sdut='sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias sdc='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove && sudo service dns-clean'
 alias pgl='ping google.com'
-alias macx='sudo killall -HUP mDNSResponder'
 alias psx='ps aux'
-alias sdk='sudo -k'
-alias sdv='sudo visudo'
-alias sdct='sudo cat /var/log/sudo'
+alias cl='clear'
+alias op='xdg-open .'
+alias opi='xdg-open'
+# alias sdk='sudo -k'
+# alias sdv='sudo visudo'
+# alias sdct='sudo cat /var/log/sudo'
 # Laziness to Directories
 alias cdk='cd Workspace/KBOY/Personal/'
 alias cdc='cd Workspace/C++'
@@ -82,8 +84,9 @@ alias cdj='cd Workspace/Java'
 alias cdr='cd Workspace/Ruby'
 alias cdp='cd Workspace/Python'
 alias cdpr='cd Workspace/Practice'
-
 alias p='python3'
 
 export PATH=$HOME/bruh/bin:$PATH
 export PATH=~/.local/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
