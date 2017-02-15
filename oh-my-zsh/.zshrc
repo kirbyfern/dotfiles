@@ -7,38 +7,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kirbyjames/.oh-my-zsh
 # First Option
-# ZSH_THEME="robbyrussel"
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="kboygwapo"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git)
 
@@ -64,6 +34,7 @@ alias macx='sudo killall -HUP mDNSResponder'
 alias psx='ps aux'
 # Laziness to Directories
 alias cdk='cd Workspace/KBOY/Personal/'
+alias cdks='cd Workspace/KBOY/SpringSemester/CS1/'
 alias cdc='cd Workspace/C++'
 alias cdj='cd Workspace/Java'
 alias cdr='cd Workspace/Ruby'
@@ -71,8 +42,6 @@ alias cdp='cd Workspace/Python'
 alias cdpr='cd Workspace/Practice'
 
 alias p='python3'
-
-#
 
 # Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
 PATH=/usr/local/bin:$PATH
