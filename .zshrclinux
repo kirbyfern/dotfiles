@@ -2,9 +2,23 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/bruh/.oh-my-zsh
+export ZSH=/home/bruh/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="xiong-chiamiov-plus"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="norm
+# ZSH_THEME="minimal"
+# ZSH_THEME="macovsky-ruby" # For Ruby
+ZSH_THEME="norm"
+
+# NORM SETTINGS:
+# PROMPT='%{$fg[cyan]%}%c %{$fg[yellow]%}🔀 $(git_prompt_info)%{$reset_color%}'
+
+# ZSH_THEME_GIT_PROMPT_PREFIX="🔄  %{$fg[red]%}git %{$fg[yellow]%}🔃 %{$fg[red]%} "
+# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[yellow]%} 🔀 %{$reset_color%}"
+
+# λ →
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -86,6 +100,7 @@ alias cdp='cd Workspace/Python'
 alias cdpr='cd Workspace/Practice'
 alias p='python3'
 
+export TERM="xterm-256color"
 export PATH=$HOME/bruh/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
