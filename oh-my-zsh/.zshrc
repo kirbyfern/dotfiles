@@ -17,14 +17,15 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Path to Laziness
 alias macx='sudo killall -HUP mDNSResponder'
 alias psx='ps aux'
-# Laziness to Directories
+alias cl='clear'
 alias cdk='cd Workspace/KBOY/Personal/'
 alias cdks='cd Workspace/KBOY/SpringSemester/CS1/'
 alias cdkp='cd Workspace/KBOY/Projects/'
 alias cdko='cd Workspace/KBOY/OpenSource/'
-alias cdvs='cd ~/Desktop/vagrant/src/flippy'
+alias cdvs='cd ~/Desktop/vagrant/src/'
 alias cdc='cd Workspace/C++'
 alias cdj='cd Workspace/Java'
 alias cdr='cd Workspace/Ruby'
@@ -39,6 +40,7 @@ alias vzs='vim .zshrc'
 alias vgu='vagrant up'
 alias vgs='vagrant ssh'
 alias vgh='vagrant halt'
+
 # Show Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 

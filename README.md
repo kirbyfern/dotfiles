@@ -1,13 +1,2 @@
-# My Personalized ZSH Theme
+### Personal dotfiles, simple scripts, aliases etc.
 
-### On Default
-
-![](assets/onmyusers.png)
-
-### On initialize git directory
-
-![](assets/gitinit.png)
-
-### Wrong input of command
-
-![](assets/wrongcommand.png)
