@@ -6,18 +6,17 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kirbyjames/.oh-my-zsh
-# First Option
-# ZSH_THEME="robbyrussell"
+
+ ZSH_THEME="afowler"
 # ZSH_THEME="xiong-chiamiov-plus"
-# ZSH_THEME="afowler"
-# ZSH_THEME="minimal"
-ZSH_THEME="macovsky-ruby"
+# ZSH_THEME="macovsky-ruby"
+# ZSH_THEME="gnzh"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Path to Laziness
+# LAZINESS #
 alias macx='sudo killall -HUP mDNSResponder'
 alias psx='ps aux'
 alias cl='clear'
@@ -41,7 +40,7 @@ alias vgu='vagrant up'
 alias vgs='vagrant ssh'
 alias vgh='vagrant halt'
 
-# Show Tree
+# SHOW TREE #
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # Add Homebrew `/usr/local/bin` and User `~/bin` to the `$PATH`
