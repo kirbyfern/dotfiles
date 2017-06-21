@@ -54,6 +54,9 @@
 // Controls the delay in ms after which quick suggestions will show up
 "editor.quickSuggestionsDelay": 10,
 
+// Disable Minimap
+"editor.minimap.enabled": false,
+
 // Indentation Guide
 "editor.renderIndentGuides": true,
 
@@ -164,6 +167,9 @@
 
 // Define profile for specified syntax or use your own profile with specific rules.
 "emmet.syntaxProfiles": {},
+
+// Bump snippets to the top
+"editor.snippetSuggestions": "top"
 
 
 // Workbench
