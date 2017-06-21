@@ -4,10 +4,10 @@
 // Editor
 
 // Controls the font family.
-"editor.fontFamily":" 'Trebuchet MS', Helvetica, sans-serif",
+"editor.fontFamily": "Menlo, Consolas, Fira Code",
 
  // Controls the font size.
-"editor.fontSize": 23,
+"editor.fontSize": 16,
 
 // Controls the line height. Use 0 to compute the lineHeight from the fontSize.
 "editor.lineHeight": 21,
@@ -54,6 +54,30 @@
 // Controls the delay in ms after which quick suggestions will show up
 "editor.quickSuggestionsDelay": 10,
 
+// Indentation Guide
+"editor.renderIndentGuides": true,
+
+// Hide indentation background in selections.
+"guides.indent.hideBackgroundOnSelection": true,
+
+// Show start-of-line indentation guides.
+"guides.indent.showFirstIndentGuides": true,
+
+// Enable normal indentation guides.
+"guides.normal.enabled": true,
+
+// Normal indentation guides rendering width.
+"guides.normal.width": 1,
+
+// Normal indentation guides rendering color for dark themes.
+"guides.normal.color.dark": "rgba(60, 60, 60, 0.75)",
+
+// Normal indentation guides rendering color for light themes.
+"guides.normal.color.light": "rgba(220, 220, 220, 0.75)",
+
+// Normal indentation guides rendering style.
+"guides.normal.style": "solid",
+
 // Enables parameter hints
 "editor.parameterHints": true,
 
@@ -76,7 +100,7 @@
 "editor.wordBasedSuggestions": true,
 
 // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
-"editor.tabCompletion": false,
+"editor.tabCompletion": true,
 
 // Controls whether the editor should highlight similar matches to the selection
 "editor.selectionHighlight": true,
