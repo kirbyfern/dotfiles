@@ -1,5 +1,4 @@
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -15,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 # LAZINESS #
 alias macx='sudo killall -HUP mDNSResponder'
 alias psx='ps aux'
+alias pgl='ping google.com'
 alias cl='clear'
 alias cdk='cd Workspace/KBOY/Personal/'
 alias cdcs='cd Workspace/KBOY/CS'
@@ -32,7 +32,6 @@ alias cdr='cd Workspace/Ruby'
 alias cdp='cd Workspace/Python'
 alias cdpr='cd Workspace/Practice'
 alias t='touch'
-alias pgl='ping google.com'
 alias p='python3'
 alias rbm='ruby -r minitest/pride'
 alias rb='ruby'
@@ -42,11 +41,13 @@ alias vgs='vagrant ssh'
 alias vgh='vagrant halt'
 alias gtg='git grok'
 alias a='atom .'
+alias bup='brew update && brew upgrade'
+alias bcl='brew cleanup'
 
 # Show Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# VS Code
+# Open VS Code
 function code {
     if [[ $# = 0 ]]
     then
@@ -66,3 +67,9 @@ PATH=/usr/local/bin:$PATH
 PATH=$HOME/bin:$PATH
 export PATH
 eval $(/usr/libexec/path_helper -s)
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add npm-packages path
+export PATH="$HOME/.npm-packages/bin:$PATH"
