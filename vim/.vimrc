@@ -40,6 +40,9 @@ call vundle#begin('~/.vim/plugins')
     Plugin 'tpope/vim-fugitive'
     Plugin 'tpope/vim-repeat'
     Plugin 'tpope/vim-surround'
+    Plugin 'mxw/vim-jsx'
+    Plugin 'pangloss/vim-javascript'
+    Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 
@@ -82,7 +85,7 @@ set backspace=indent           " ┐
 set backspace+=eol             " │ Allow `backspace`
 set backspace+=start           " ┘ in insert mode
 
-set backupdir=~/.vim/backups   " y for backup files
+set backupdir=~/.vim/backups   " Set directory for backup files
 
 set backupskip=/tmp/*          " ┐ Don't create backups
 set backupskip+=/private/tmp/* " ┘ for certain files
