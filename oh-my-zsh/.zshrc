@@ -10,8 +10,6 @@ export ZSH=/Users/kirbyjames/.oh-my-zsh
 ZSH_THEME="cloud"
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 # LAZINESS #
 alias macx='sudo killall -HUP mDNSResponder'
 alias psx='ps aux'
@@ -22,10 +20,10 @@ alias cdcs='cd Workspace/KBOY/CS'
 alias cdkp='cd Workspace/KBOY/Projects/'
 alias cdko='cd Workspace/KBOY/OpenSource/'
 alias cdvj='cd ~/Desktop/vagrant-javascript/src'
-alias cdvs='cd ~/Desktop/vagrant/src/'
-alias cdva='cd ~/Desktop/vagrant/agile/chess-app'
-alias cdvd='cd ~/Desktop/vagrant/agile-development/chess-app'
-alias cdvp='cd ~/Desktop/vagrant/projects'
+alias cdvs='cd ~/Desktop/QQ/vagrant/src/'
+alias cdva='cd ~/Desktop/QQ/vagrant/agile/chess-app'
+alias cdvd='cd ~/Desktop/QQ/vagrant/agile-development/chess-app'
+alias cdvp='cd ~/Desktop/QQ/vagrant/projects'
 alias cdc='cd Workspace/C++'
 alias cdj='cd Workspace/Java'
 alias cdjs='cd Workspace/Javascript'
@@ -48,7 +46,7 @@ alias bup='brew update && brew upgrade'
 alias bcl='brew cleanup'
 alias glog='git log --graph --full-history --all --oneline --color --decorate --date-order'
 alias grs='git remote show origin'
-
+alias pgb='php ./bin/console'
 # Show Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
@@ -78,6 +76,16 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add npm-packages path
 export PATH="$HOME/.npm-packages/bin:$PATH"
+
+# PHP Version Configuration
+# PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+# export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+
+# sourcing bash
+source ~/.bash_profile
+
+# sourcing zsh
+source $ZSH/oh-my-zsh.sh
 
 # added by travis gem
 [ -f /Users/kirbyjames/.travis/travis.sh ] && source /Users/kirbyjames/.travis/travis.sh
