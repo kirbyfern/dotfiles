@@ -91,7 +91,10 @@ dri() { docker rmi $(docker images -q); }
 alias k='kubectl'
 alias kg='kubectl get'
 alias kgpn='kubectl get pods -n'
+
+# ------------------------------------
 # Show Tree
+# ------------------------------------
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # ------------------------------------
