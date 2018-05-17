@@ -1,7 +1,3 @@
-#-------------------------------------
-# Wassup Yall, Kirby Says Hi
-#-------------------------------------
-
 # Load RVM into a shell session *as a function*
 
 # If you come from bash you might have to change your $PATH.
@@ -92,10 +88,12 @@ alias k='kubectl'
 alias kg='kubectl get'
 alias kgpn='kubectl get pods -n'
 
-# ------------------------------------
+
 # Show Tree
-# ------------------------------------
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# TheFuck
+eval $(thefuck --alias qq)
 
 # ------------------------------------
 # Open VS Code
@@ -145,6 +143,13 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # ------------------------------------
 source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
+
+#-------------------------------------
+# Check my current temp.
+#-------------------------------------
+alias osx='./osx-cpu-temp'
+alias osxf='./osx-cpu-temp -F'
+alias osxc='./osx-cpu-temp -C'
 
 # ------------------------------------
 # added by travis gem
