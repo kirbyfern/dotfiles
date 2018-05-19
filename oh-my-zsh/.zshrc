@@ -6,6 +6,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kirbyjames/.oh-my-zsh
 
+# Access MySQL on the terminal
+export PATH=/Applications/MAMP/library/bin:$PATH
+
 # ZSH_THEME="afowler"
 ZSH_THEME="cloud"
 plugins=(git)
@@ -88,7 +91,6 @@ alias k='kubectl'
 alias kg='kubectl get'
 alias kgpn='kubectl get pods -n'
 
-
 # Show Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
@@ -125,7 +127,6 @@ eval $(/usr/libexec/path_helper -s)
 # ------------------------------------
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # ------------------------------------
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # ------------------------------------
 # Add npm-packages path
@@ -151,7 +152,15 @@ alias osx='./osx-cpu-temp'
 alias osxf='./osx-cpu-temp -F'
 alias osxc='./osx-cpu-temp -C'
 
+#-------------------------------------
+# Open SourceTree
+#-------------------------------------
+alias stree='open -a SourceTree'
+
 # ------------------------------------
 # added by travis gem
 # ------------------------------------
 [ -f /Users/kirbyjames/.travis/travis.sh ] && source /Users/kirbyjames/.travis/travis.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
