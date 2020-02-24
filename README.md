@@ -1,2 +1,2 @@
-### Personal dotfiles, simple scripts, aliases etc.
+### my dotfiles
 
