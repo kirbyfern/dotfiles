@@ -221,9 +221,6 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -263,7 +260,6 @@ alias sdc='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremo
 alias pgl='ping google.com'
 alias psx='ps aux'
 alias cl='clear'
-alias op='xdg-open'
 alias p='python3'
 alias rbm='ruby -r minitest/pride'
 alias rb='ruby'
@@ -277,6 +273,7 @@ alias glog='git log --graph --full-history --all --oneline --color --decorate --
 alias grs='git remote show origin'
 alias pgb='php ./bin/console'
 alias cdk='cd /home/superkirby/kirby'
+alias ]='xdg-open'
 
 # ------------------------------------
 # Docker alias and function
@@ -329,3 +326,7 @@ export TERM="xterm-256color"
 export PATH=~/.local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+rm -rf "$HOME/.zcompdump"; compinit -d
+source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/templates/zshrc.zsh-template
+plugins=(git)
