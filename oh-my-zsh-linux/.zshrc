@@ -254,12 +254,16 @@ fi
 # alias sdk='sudo -k'
 # alias sdv='sudo visudo'
 # alias sdct='sudo cat /var/log/sudo'
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
 alias sdu='sudo apt-get update'
 alias sdut='sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias sdc='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove && sudo service dns-clean'
 alias pgl='ping google.com'
 alias psx='ps aux'
 alias cl='clear'
+alias op='xdg-open'
 alias p='python3'
 alias rbm='ruby -r minitest/pride'
 alias rb='ruby'
@@ -274,10 +278,11 @@ alias grs='git remote show origin'
 alias pgb='php ./bin/console'
 alias cdk='cd /home/superkirby/kirby'
 alias ]='xdg-open'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# ------------------------------------
-# Docker alias and function
-# ------------------------------------
+# -------
+# Docker
+# -------
 # Get latest container ID
 alias dl="docker ps -l -q"
 # Get container process
@@ -290,9 +295,11 @@ alias di="docker images"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 # Run deamonized container, e.g., $dkd base /bin/echo hello
 alias dkd="docker run -d -P"
+alias drun='docker run --rm -it -v "${PWD}":/app'
 # Run interactive container, e.g., $dki base /bin/bash
 alias dki="docker run -i -t -P"
 alias dc="docker-compose"
+alias dpsql="docker-compose exec postgres psql"
 # Stop all containers
 dstop() { docker stop $(docker ps -a -q); }
 # Remove all containers
@@ -301,13 +308,17 @@ drm() { docker rm $(docker ps -a -q); }
 alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 # Remove all images
 dri() { docker rmi $(docker images -q); }
+alias dew="docker-compose exec web"
 
-# ------------------------------------
+# -----------
 # Kubernetes
-# ------------------------------------
+# -----------
 alias k='kubectl'
 alias kg='kubectl get'
 alias kgpn='kubectl get pods -n'
+
+# Jekyll
+alias jek="bundle exec jekyll serve --config _config.yml,_config.dev.yml --drafts --livereload"
 
 # Show Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
