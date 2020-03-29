@@ -27,6 +27,31 @@ plugins=(git)
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+#### COPY BELOW TO OVERRIDE "robbyrussel"
+#### START THEME CONFIG
+#### Snippet Will show the user on the terminal ###
+# %{$FG[014]%}%n%{$reset_color%} \
+
+# _collapsed_wd() {
+#   echo $(pwd | perl -pe '
+#    BEGIN {
+#       binmode STDIN,  ":encoding(UTF-8)";
+#       binmode STDOUT, ":encoding(UTF-8)";
+#    }; s|^$ENV{HOME}|~|g; s|/([^/.])[^/]*(?=/)|/$1|g; s|/\.([^/])[^/]*(?=/)|/.$1|g
+# ')
+# }
+
+# PROMPT='[%{$FG[014]%}$(_collapsed_wd)%{$reset_color%}] \
+# $(git_prompt_info)\
+# %{$fg[white]%}$PROMPT_SYMBOL '
+
+
+# ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[011]%}(%{$FG[011]%}git) %{$FG[002]%}➜ %{$fg[green]%}"
+# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}✗"
+# ZSH_THEME_GIT_PROMPT_CLEAN=""
+#### END THEME CONFIG
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -116,16 +141,12 @@ ZSH_THEME="robbyrussell"
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
-alias sdk='sudo -k'
-alias sdv='sudo visudo'
-alias sdct='sudo cat /var/log/sudo'
 alias sdu='sudo apt-get update'
 alias sdut='sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias sdc='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove && sudo service dns-clean'
 alias pgl='ping google.com'
 alias psx='ps aux'
 alias cl='clear'
-alias op='xdg-open'
 alias p='python3'
 alias rbm='ruby -r minitest/pride'
 alias rb='ruby'
@@ -134,7 +155,6 @@ alias vgu='vagrant up'
 alias vgs='vagrant ssh'
 alias vgh='vagrant halt'
 alias gtg='git grok'
-alias a='atom .'
 alias glog='git log --graph --full-history --all --oneline --color --decorate --date-order'
 alias grs='git remote show origin'
 alias pgb='php ./bin/console'
