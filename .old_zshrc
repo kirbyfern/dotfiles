@@ -251,9 +251,9 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# alias sdk='sudo -k'
-# alias sdv='sudo visudo'
-# alias sdct='sudo cat /var/log/sudo'
+alias sdk='sudo -k'
+alias sdv='sudo visudo'
+alias sdct='sudo cat /var/log/sudo'
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"

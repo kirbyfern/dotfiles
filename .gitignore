@@ -1,49 +1,58 @@
-[alias]
-  # Show verbose output about tags, branches or remotes
-  tags = tag -l
-  branches = branch -a
-  remotes = remote -v
-  # Pretty log output
-  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
 
-[color]
-  # Use colors in Git commands that are capable of colored output when outputting to the terminal
-  ui = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+# Icon must end with two \r
+Icon
 
-# Use `origin` as the default remote on the `master` branch in all cases
-[branch "master"]
-  remote = origin
-  merge = refs/heads/master
+# Thumbnails
+._*
 
-# Swap
-[._]*.s[a-v][a-z]
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-# Session
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
 Session.vim
-
-# Temporary
 .netrwhist
 *~
 
-# Auto-generated tag files
-tags
+.uuid
 
-# Persistent undo
-[._]*.un~/
+.extra
+.gitconfig
+.gnupg
+!.gnupg/gpg*.conf
+.i3/logfile
+.irssi/away.log
+.irssi/config*
+.irssi/nicknames_whitelist
+.irssi/otr
+.irssi/saved_colors
+.irssi/scripts/autorun/blocker.pl
+.irssi/startup
+.rainbow_oauth
+.nginx/conf.d/*
