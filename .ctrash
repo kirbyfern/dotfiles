@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+find $HOME/.local/share/Trash -mindepth 1 -delete
