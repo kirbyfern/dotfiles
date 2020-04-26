@@ -29,28 +29,36 @@ ZSH_THEME="robbyrussell"
 
 #### COPY BELOW TO OVERRIDE "robbyrussel"
 #### START THEME CONFIG
-#### Snippet Will show the user on the terminal ###
+### Snippet Will show the user on the terminal ###
 # %{$FG[014]%}%n%{$reset_color%} \
 
-# _collapsed_wd() {
-#   echo $(pwd | perl -pe '
-#    BEGIN {
-#       binmode STDIN,  ":encoding(UTF-8)";
-#       binmode STDOUT, ":encoding(UTF-8)";
-#    }; s|^$ENV{HOME}|~|g; s|/([^/.])[^/]*(?=/)|/$1|g; s|/\.([^/])[^/]*(?=/)|/.$1|g
-# ')
-# }
+_collapsed_wd() {
+  echo $(pwd | perl -pe '
+   BEGIN {
+      binmode STDIN,  ":encoding(UTF-8)";
+      binmode STDOUT, ":encoding(UTF-8)";
+   }; s|^$ENV{HOME}|~|g; s|/([^/.])[^/]*(?=/)|/$1|g; s|/\.([^/])[^/]*(?=/)|/.$1|g
+')
+}
 
-# PROMPT='[%{$FG[014]%}$(_collapsed_wd)%{$reset_color%}] \
-# $(git_prompt_info)\
-# %{$fg[white]%}$PROMPT_SYMBOL '
+PROMPT='[%{$FG[014]%}$(_collapsed_wd)%{$reset_color%}] \
+$(git_prompt_info)\
+%{$fg[white]%}$PROMPT_SYMBOL '
 
 
-# ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[011]%}(%{$FG[011]%}git) %{$FG[002]%}➜ %{$fg[green]%}"
-# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}✗"
-# ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[011]%}(%{$FG[011]%}git) %{$FG[002]%}➜ %{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
 #### END THEME CONFIG
+
+### FUNCTION for `cd ..` to the root of the project
+### type rcd in the command line when inside an npm project
+function rcd {
+   cd $(npm root) &&
+   cd ..
+}
+## END FUNCTION
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -208,4 +216,3 @@ alias jek="bundle exec jekyll serve --config _config.yml,_config.dev.yml --draft
 # Show Tree
 # -----------
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-
