@@ -1,325 +1,137 @@
-// Place your settings in this file to overwrite default and user settings.
+// Current settings on my makefile on github
 {
-
-// Editor
-
-// Controls the font family.
-"editor.fontFamily": "Menlo, Consolas, Fira Code",
-
- // Controls the font size.
-"editor.fontSize": 16,
-
-// Controls the line height. Use 0 to compute the lineHeight from the fontSize.
-"editor.lineHeight": 21,
-
-// Controls visibility of line numbers
-"editor.lineNumbers": true,
-
-// Controls visibility of the glyph margin
-"editor.glyphMargin": false,
-
-// Columns at which to show vertical rulers
-"editor.rulers": [],
-
-// Characters that will be used as word separators when doing word related navigations or operations
-"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
-
-// The number of spaces a tab is equal to.
-"editor.tabSize": 2,
-
-// Insert spaces when pressing Tab.
-"editor.insertSpaces": true,
-
-// When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
-"editor.detectIndentation": true,
-
-// Controls if selections have rounded corners
-"editor.roundedSelection": true,
-
-// Controls if the editor will scroll beyond the last line
-"editor.scrollBeyondLastLine": true,
-
-// Controls after how many characters the editor will wrap to the next line. Setting this to 0 turns on viewport width wrapping (word wrapping). Setting this to -1 forces the editor to never wrap.
-"editor.wrappingColumn": 84,
-
-// Controls the indentation of wrapped lines. Can be one of 'none', 'same' or 'indent'.
-"editor.wrappingIndent": "same",
-
-// A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events
-"editor.mouseWheelScrollSensitivity": 1,
-
-// Controls if quick suggestions should show up or not while typing
-"editor.quickSuggestions": true,
-
-// Controls the delay in ms after which quick suggestions will show up
-"editor.quickSuggestionsDelay": 10,
-
-// Disable Minimap
-"editor.minimap.enabled": false,
-
-// Indentation Guide
-"editor.renderIndentGuides": true,
-
-// Hide indentation background in selections.
-"guides.indent.hideBackgroundOnSelection": true,
-
-// Show start-of-line indentation guides.
-"guides.indent.showFirstIndentGuides": true,
-
-// Enable normal indentation guides.
-"guides.normal.enabled": true,
-
-// Normal indentation guides rendering width.
-"guides.normal.width": 1,
-
-// Normal indentation guides rendering color for dark themes.
-"guides.normal.color.dark": "rgba(60, 60, 60, 0.75)",
-
-// Normal indentation guides rendering color for light themes.
-"guides.normal.color.light": "rgba(220, 220, 220, 0.75)",
-
-// Normal indentation guides rendering style.
-"guides.normal.style": "solid",
-
-// Enables parameter hints
-"editor.parameterHints": true,
-
-// Controls if the editor should automatically close brackets after opening them
-"editor.autoClosingBrackets": true,
-
-// Controls if the editor should automatically format the line after typing
-"editor.formatOnType": false,
-
-// Controls if suggestions should automatically show up when typing trigger characters
-"editor.suggestOnTriggerCharacters": true,
-
-// Controls if suggestions should be accepted 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions.
-"editor.acceptSuggestionOnEnter": true,
-
-// Controls whether snippets are shown with other suggestions and how they are sorted.
-"editor.snippetSuggestions": "inline",
-
-// Enable word based suggestions.
-"editor.wordBasedSuggestions": true,
-
-// Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
-"editor.tabCompletion": true,
-
-// Controls whether the editor should highlight similar matches to the selection
-"editor.selectionHighlight": true,
-
-// Controls the number of decorations that can show up at the same position in the overview ruler
-"editor.overviewRulerLanes": 3,
-
-// Control the cursor animation style, possible values are 'blink', 'smooth', 'phase', 'expand' and 'solid'
-"editor.cursorBlinking": "phase",
-
-// Zoom the font of the editor when using mouse wheel and holding Ctrl
-"editor.mouseWheelZoom": false,
-
-// Controls the cursor style, accepted values are 'block', 'line' and 'underline'
-"editor.cursorStyle": "line",
-
-// Enables font ligatures
-"editor.fontLigatures": true,
-
-// Controls if the cursor should be hidden in the overview ruler.
-"editor.hideCursorInOverviewRuler": false,
-
-// Controls whether the editor should render whitespace characters
-"editor.renderWhitespace": true,
-
-// Controls whether the editor should render control characters
-"editor.renderControlCharacters": true,
-
-// Controls whether the editor should render indent guides
-"editor.renderIndentGuides": false,
-
-// Controls if the editor shows reference information for the modes that support it
-"editor.referenceInfos": true,
-
-// Controls whether the editor has code folding enabled
-"editor.folding": true,
-
-// Inserting and deleting whitespace follows tab stops
-"editor.useTabStops": true,
-
-// Remove trailing auto inserted whitespace
-"editor.trimAutoWhitespace": true,
-
-// Keep peek editors open even when double clicking their content or when hitting Escape.
-"editor.stablePeek": false,
-
-// Controls if the diff editor shows the diff side by side or inline
-"diffEditor.renderSideBySide": true,
-
-// Controls if the diff editor shows changes in leading or trailing whitespace as diffs
-"diffEditor.ignoreTrimWhitespace": true,
-
-
-// Emmet
-
-// When enabled, emmet abbreviations are expanded when pressing TAB.
-"emmet.triggerExpansionOnTab": true,
-
-// Preferences used to modify behavior of some actions and resolvers of Emmet.
-"emmet.preferences": {},
-
-// Define profile for specified syntax or use your own profile with specific rules.
-"emmet.syntaxProfiles": {},
-
-// Bump snippets to the top
-"editor.snippetSuggestions": "top"
-
-
-// Workbench
-
-// Controls if opened editors should show in tabs or not.
-"workbench.editor.showTabs": true,
-
-// Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
-"workbench.editor.enablePreview": true,
-
-// Controls if opened editors from quick open show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
-"workbench.editor.enablePreviewFromQuickOpen": true,
-
-// Controls where editors open. Select 'left' or 'right' to open editors to the left or right of the current active one. Select 'first' or 'last' to open editors independently from the currently active one.
-"workbench.editor.openPositioning": "right",
-
-
-// Window
-
-// When enabled, will open files in a new window instead of reusing an existing instance.
-"window.openFilesInNewWindow": true,
-
-// Controls how folders are being reopened after a restart. Select 'none' to never reopen a folder, 'one' to reopen the last folder you worked on or 'all' to reopen all folders of your last session.
-"window.reopenFolders": "one",
-
-// Controls if a window should restore to full screen mode if it was exited in full screen mode.
-"window.restoreFullscreen": false,
-
-// Adjust the zoom level of the window. The original size is 0 and each increment above (e.g. 1) or below (e.g. -1) represents zooming 20% larger or smaller. You can also enter decimals to adjust the zoom level with a finer granularity.
-"window.zoomLevel": 0,
-
-
-// Files
-
-// Configure glob patterns for excluding files and folders.
-"files.exclude": {
-"**/.git": true,
-"**/.svn": true,
-"**/.hg": true,
-"**/.DS_Store": true
-},
-
-// Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
-"files.associations": {},
-
-// The default character set encoding to use when reading and writing files.
-"files.encoding": "utf8",
-
-// The default end of line character.
-"files.eol": "\n",
-
-// When enabled, will trim trailing whitespace when you save a file.
-"files.trimTrailingWhitespace": true,
-
-// Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange". If set to "afterDelay" you can configure the delay in "files.autoSaveDelay".
-"files.autoSave": "afterDelay",
-
-// Controls the delay in ms after which a dirty file is saved automatically. Only applies when "files.autoSave" is set to "afterDelay"
-"files.autoSaveDelay": 5000,
-
-// Configure glob patterns of file paths to exclude from file watching. Changing this setting requires a restart. When you experience Code consuming lots of cpu time on startup, you can exclude large folders to reduce the initial load.
-"files.watcherExclude": {
-"**/.git/objects/**": true,
-"**/node_modules/**": true
-},
-
-
-// File Explorer
-
-// Number of editors shown in the Open Editors pane. Set it to 0 to hide the pane.
-"explorer.openEditors.visible": 9,
-
-// Controls if the height of the open editors section should adapt dynamically to the number of elements or not.
-"explorer.openEditors.dynamicHeight": true,
-
-// Controls if the explorer should automatically reveal files when opening them.
-"explorer.autoReveal": true,
-
-// Controls if the explorer should allow to move files and folders via drag and drop.
-"explorer.enableDragAndDrop": true,
-
-
-// Search
-
-// Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
-"search.exclude": {
-"**/node_modules": true,
-"**/bower_components": true
-},
-
-
-// Git
-
-// Is git enabled
-"git.enabled": true,
-
-// Path to the git executable
-"git.path": null,
-
-// Whether auto refreshing is enabled
-"git.autorefresh": true,
-
-// Whether auto fetching is enabled.
-"git.autofetch": true,
-
-// Whether long commit messages should be warned about.
-"git.enableLongCommitWarning": true,
-
-// Always allow large repositories to be managed by Code.
-"git.allowLargeRepositories": false,
-
-// Confirm before synchronizing git repositories.
-"git.confirmSync": false,
-
-
-// HTTP
-
-// The proxy setting to use. If not set will be taken from the http_proxy and https_proxy environment variables
-"http.proxy": "",
-
-// Whether the proxy server certificate should be verified against the list of supplied CAs.
-"http.proxyStrictSSL": true,
-
-
-// Update
-
-// Configure whether you receive automatic updates from an update channel. Requires a restart after change.
-"update.channel": "default",
-
-
-// CSS
-
-// Controls CSS validation and problem severities.
-
-// Enables or disables all validations
-"css.validate": true,
-
-// When using a vendor-specific prefix make sure to also include all other vendor-specific properties
-"css.lint.compatibleVendorPrefixes": "ignore",
-
-// When using a vendor-specific prefix also include the standard property
-"css.lint.vendorPrefix": "warning",
-
-// Do not use duplicate style definitions
-"css.lint.duplicateProperties": "ignore",
-
-// Do not use empty rulesets
-"css.lint.emptyRules": "warning",
-
-// Import statements do not load in parallel
-"css.lint.importStatement": "ignore",
-
-// Do not use width or height...
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": false,
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  // Glob patterns for excluding folders and files
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/*.build": true,
+    "**/*.git": true,
+    "**/*.err": true,
+    "**/*.rec": true,
+    "**/*.log": true,
+    "**/*.evt": true,
+    "**/buildfre.*": true,
+    "**/buildchk.*": true,
+    "**/.DS_Store": true
+  },
+  "git.autofetch": true,
+  "terminal.integrated.shellArgs.windows": [
+    "--login",
+    "-i"
+  ],
+  "java.home": "/home/superkirby/.jenv/versions/11.0",
+  "python.dataScience.sendSelectionToInteractiveWindow": false,
+  "python.jediEnabled": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 0,
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  // Disable welcome screen on startup
+  "workbench.welcome.enabled": false,
+  // Controls if the diff editor shows the diff side by side or inline
+  "diffEditor.renderSideBySide": false,
+  // Insert spaces when pressing Tab
+  "editor.insertSpaces": true,
+  // When opening both `editor.tabSize` and `editor.insertSpaces`
+  // will be detected and overridden based on the file contents
+  // set to false to keep the values I explicitly set, above.
+  "editor.detectIndentation": false,
+  // The number of spaces a tab is equal to 2 spaces not 4
+  "editor.tabSize": 2,
+  // Minimap
+  "editor.minimap.enabled": true,
+  // A multiplier to be used on the `deltaX` and `deltaY` of mouse wheel scroll events
+  "editor.mouseWheelScrollSensitivity": 5,
+  // Controls whether the editor should render whitespace characters
+  "editor.renderWhitespace": "all",
+  // Extensions to be installed by the Extension Manager
+  "extension-manager.extensions": [
+    "eg2.tslint", // TypeScript linter
+    "ms-vscode.cpptools", // Cpp tools
+    "msjsdiag.debugger-for-chrome", // Debugger for Chrome
+    "robertohuertasm.vscode-icons" // Cool icons for files
+  ],
+  // When enabled, will trim trailing whitespace when you save a file
+  "files.trimTrailingWhitespace": true,
+  // Default end of line character
+  "files.eol": "\n",
+  // Glob patterns for excluding files and folders in searches
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    ".build/**": true,
+    "out*/**": true,
+    "i18n/**": true,
+    "extensions/**/out/**": true,
+    "*.min.js": true
+  },
+  // Enable linter for TypeScript files
+  "tslint.enable": true,
+  "files.associations": {
+    "deque": "cpp",
+    "list": "cpp",
+    "vector": "cpp",
+    "xstring": "cpp"
+  }
+}
