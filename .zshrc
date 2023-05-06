@@ -1,24 +1,27 @@
+autoload bashcompinit
+bashcompinit
 # ------------------------------------
 # Sourcing Bash & ZSH & NVM
 # ------------------------------------
-source /home/superkirby/.bash_profile
+# source /home/vimftw/.bash_profile
 # Path to your oh-my-zsh installation.
-export ZSH="/home/superkirby/.oh-my-zsh"
+export PATH="/home/vimftw/:$PATH"
+export ZSH="/home/vimftw/.oh-my-zsh"
 export TERM="xterm-256color"
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/templates/zshrc.zsh-template
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path
 export PATH=~/.local/bin:$PATH
-export PATH="$PATH:$HOME/.rvm/bin"
-export NVM_DIR="~/.nvm"
+#export PATH="$PATH:$HOME/.rvm/bin"
+#export NVM_DIR="~/.nvm"
 plugins=(git)
 
 # Set name of the theme to load --- if set to "random", it will
@@ -146,29 +149,74 @@ function rcd {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ll="ls -alF"
-alias la="ls -A"
-alias l="ls -CF"
+alias fi=find
 alias sdu='sudo apt-get update'
 alias sdut='sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias sdc='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove && sudo service dns-clean'
+alias cl='clear'
+alias t='touch'
+alias p='python3'
+alias vzs='vim .zshrc'
+alias pgb='php ./bin/console'
+alias cdk='cd /home/vimftw/Kirby'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+#-------
+# copy & move | description in order
+# cwd = copy working directory
+# cp = copy file
+# mv = move file
+#-------
+alias cwd='pwd | tr -d "\r\n" | xclip -selection clipboard'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# PHP one time and one time only!
+alias pgb='php ./bin/console'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Check HTTP Traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\\: .*|GET \\/.*\""
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+# IP addresses | List all running processes in the background | check Ping requests
 alias pgl='ping google.com'
 alias psx='ps aux'
-alias cl='clear'
-alias p='python3'
+
+# -------
+# Git
+# -------
+alias grs='git remote show origin'
+alias gtg='git grok'
+alias glog='git log --graph --full-history --all --oneline --color --decorate --date-order'
+alias grs='git remote show origin'
+
+# -------
+# List directories
+# -------
+alias lsd="ls -lhF ${colorflag} | grep --color=never '^d'"
+# List all files colorized in long format
+alias ll='ls -lh'
+# List all files colorized in long format, including dot files
+alias la="ls -lahF ${colorflag}"
+alias l="ls -CF"
+
+# -------
+# Ruby & Vagrant
+# -------
 alias rbm='ruby -r minitest/pride'
 alias rb='ruby'
 alias vzs='vim .zshrc'
 alias vgu='vagrant up'
 alias vgs='vagrant ssh'
 alias vgh='vagrant halt'
-alias gtg='git grok'
-alias glog='git log --graph --full-history --all --oneline --color --decorate --date-order'
-alias grs='git remote show origin'
-alias pgb='php ./bin/console'
-alias cdk='cd /home/superkirby/Kirby'
-alias ]='xdg-open'
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # -------
 # Docker
@@ -216,3 +264,5 @@ alias jek="bundle exec jekyll serve --config _config.yml,_config.dev.yml --draft
 # Show Tree
 # -----------
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+alias shopt='/usr/bin/shopt'

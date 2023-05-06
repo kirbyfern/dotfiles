@@ -11,7 +11,7 @@
 <!-- tocstop -->
 
 ## About
-Heavily inspired by Jessie Frazelle .vim files
+my dot files
 
 
 ### Pathogen
